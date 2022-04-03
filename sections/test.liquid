@@ -1,0 +1,50 @@
+<div class="test-section" style="text-align:{{ section.settings.horizontal_alignment }}">
+    <h1 style="color: {{ section.settings.test_color }};">Test Section</h1>
+</div>
+
+{% schema %}
+  {
+    "name": "Test Section",
+    "settings": [
+    {
+        "type": "color",
+        "id": "test_color",
+        "label": "Color",
+        "default": "#c3c3c3"
+      },
+      {
+        "type": "select",
+        "id": "horizontal_alignment",
+        "label": "Horizontal alignment",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "center"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Test Section",
+        "category": "Test Category"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
